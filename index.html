@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting..</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a0000 0%, #2a0005 30%, #3a0010 70%, #4a0015 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    .redirect-message {
+      margin-top: 20px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .redirect-message a {
+      color: #ff4444;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .redirect-message a:hover {
+      color: #ff8888;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 160px;
+      }
+      .redirect-message {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="/picapeslogo.png" alt="PiCapes Logo" class="logo">
+  <div class="redirect-message">
+    Redirecting... If not redirected, <a href="https://picapes.syanic.org/">click here</a>.
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        window.location.href = "https://picapes.syanic.org/";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
