@@ -1,2 +1,2 @@
 # picapes.github.io
-Website of PiCapes
+PiCapes GitHub Pages (not actual website)
